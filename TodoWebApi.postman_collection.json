@@ -1,0 +1,325 @@
+{
+	"info": {
+		"name": "TodoWebApi",
+		"_postman_id": "389117c3-137b-0277-5b12-0904264541b3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Todos",
+			"description": "",
+			"item": [
+				{
+					"name": "Create todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJSaWNoZWxpZXUiLCJqdGkiOiIzZTA0ZGUwNS00MGYxLTRjY2MtOTdiYi03MmJiMzIzN2MxZjciLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBmOGEwZDEyLTRlYTItNDc5NS04ZGI4LTBiZWZjNDdkZWM5MiIsImV4cCI6MTUxNDA3ODM3NywiaXNzIjoiaHR0cDovL3lvdXJkb21haW4uY29tIiwiYXVkIjoiaHR0cDovL3lvdXJkb21haW4uY29tIn0.nZkOuLtVPhVOAhrmRSl4bgB3xAUGEqkQByLOfQgyKOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"content\": \"new todo\",\n\t\"done\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:22364/api/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22364",
+							"path": [
+								"api",
+								"todos"
+							]
+						},
+						"description": "Create an item on the todo list"
+					},
+					"response": []
+				},
+				{
+					"name": "Get todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJSaWNoZWxpZXUiLCJqdGkiOiIzZTA0ZGUwNS00MGYxLTRjY2MtOTdiYi03MmJiMzIzN2MxZjciLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBmOGEwZDEyLTRlYTItNDc5NS04ZGI4LTBiZWZjNDdkZWM5MiIsImV4cCI6MTUxNDA3ODM3NywiaXNzIjoiaHR0cDovL3lvdXJkb21haW4uY29tIiwiYXVkIjoiaHR0cDovL3lvdXJkb21haW4uY29tIn0.nZkOuLtVPhVOAhrmRSl4bgB3xAUGEqkQByLOfQgyKOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"new test\",\n\t\"isComplete\":true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:22364/api/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22364",
+							"path": [
+								"api",
+								"todos"
+							]
+						},
+						"description": "Create an item on the todo list"
+					},
+					"response": []
+				},
+				{
+					"name": "Update todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtZUBvemd1LmRrIiwianRpIjoiZWJlYjNlOWYtMzllMS00OTdmLWE4MzQtNTUxNDE4OWFhZmUyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJmN2E0ZjQ2OS0yNDA3LTQwY2ItYWRjNC1mNTFlOWIwY2MyNjkiLCJleHAiOjE1MTQwNTA2NzksImlzcyI6Imh0dHA6Ly95b3VyZG9tYWluLmNvbSIsImF1ZCI6Imh0dHA6Ly95b3VyZG9tYWluLmNvbSJ9.QUDT0hdyw9lvgmnAMVAW47xP5Dsnhgq_FRJ_A8xywFc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"content\": \"nouveau nom\",\n  \"done\": \"false\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:22364/api/todos/53c08da9-51e2-4516-abc1-761e70713d7d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22364",
+							"path": [
+								"api",
+								"todos",
+								"53c08da9-51e2-4516-abc1-761e70713d7d"
+							]
+						},
+						"description": "Update an item on the todo list. Doesn't need the full set of new data"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtZUBvemd1LmRrIiwianRpIjoiZWJlYjNlOWYtMzllMS00OTdmLWE4MzQtNTUxNDE4OWFhZmUyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJmN2E0ZjQ2OS0yNDA3LTQwY2ItYWRjNC1mNTFlOWIwY2MyNjkiLCJleHAiOjE1MTQwNTA2NzksImlzcyI6Imh0dHA6Ly95b3VyZG9tYWluLmNvbSIsImF1ZCI6Imh0dHA6Ly95b3VyZG9tYWluLmNvbSJ9.QUDT0hdyw9lvgmnAMVAW47xP5Dsnhgq_FRJ_A8xywFc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:22364/api/todos/53c08da9-51e2-4516-abc1-761e70713d7d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22364",
+							"path": [
+								"api",
+								"todos",
+								"53c08da9-51e2-4516-abc1-761e70713d7d"
+							]
+						},
+						"description": "Delete an item from its URL"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"Richelieu\",\n\t\"password\": \"SomeSecurePassword123!\",\n\t\"mail\": \"me@ozgu.dk\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:22364/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22364",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtZUBvemd1LmRrIiwianRpIjoiZWJlYjNlOWYtMzllMS00OTdmLWE4MzQtNTUxNDE4OWFhZmUyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJmN2E0ZjQ2OS0yNDA3LTQwY2ItYWRjNC1mNTFlOWIwY2MyNjkiLCJleHAiOjE1MTQwNTA2NzksImlzcyI6Imh0dHA6Ly95b3VyZG9tYWluLmNvbSIsImF1ZCI6Imh0dHA6Ly95b3VyZG9tYWluLmNvbSJ9.QUDT0hdyw9lvgmnAMVAW47xP5Dsnhgq_FRJ_A8xywFc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Email\": \"me@ozgu.dk\",\n\t\"PasswordHash\": \"SomeSecurePassword123!\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:22364/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22364",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtZUBvemd1LmRrIiwianRpIjoiZWJlYjNlOWYtMzllMS00OTdmLWE4MzQtNTUxNDE4OWFhZmUyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJmN2E0ZjQ2OS0yNDA3LTQwY2ItYWRjNC1mNTFlOWIwY2MyNjkiLCJleHAiOjE1MTQwNTA2NzksImlzcyI6Imh0dHA6Ly95b3VyZG9tYWluLmNvbSIsImF1ZCI6Imh0dHA6Ly95b3VyZG9tYWluLmNvbSJ9.QUDT0hdyw9lvgmnAMVAW47xP5Dsnhgq_FRJ_A8xywFc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Email\": \"me@ozgu.dk\",\n\t\"PasswordHash\": \"SomeSecurePassword123!\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:22364/api/users/0f76a32a-a5dd-4b6f-9b83-b532cc30e17b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22364",
+							"path": [
+								"api",
+								"users",
+								"0f76a32a-a5dd-4b6f-9b83-b532cc30e17b"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"Richelieu\",\n\t\"password\": \"SomeSecurePassword123!\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:22364/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22364",
+							"path": [
+								"api",
+								"login"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
