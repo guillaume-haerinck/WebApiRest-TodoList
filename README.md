@@ -54,7 +54,7 @@ PATCH /api/todos/GUID
 * [.NET Core 2.0](https://www.microsoft.com/net/download/windows) - Le framework C# utilisé
 * [Visual Studio 2017](https://www.visualstudio.com/) - IDE utilisé
 
-## Autheurs
+## Auteurs
 
 * **Guillaume Haerinck** 
 * **Azis Tekaya**
